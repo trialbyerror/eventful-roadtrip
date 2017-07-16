@@ -6,7 +6,7 @@ import AddGreeter from './AddGreeter';
 class HelloWorldList extends Component {
 constructor (props) {
   super (props);
-  this.state = {greetings: ["Jim", "Sally", "Bender"]};
+  this.state = {greetings: [5]};
   this.addGreeting = this.addGreeting.bind(this);
 }
 
@@ -21,8 +21,8 @@ constructor (props) {
   }
 
   renderGreetings() {
-    return this.state.greetings.map(questionString => (
-      <HelloWorld key={questionString} questionString={questionString} />
+    return this.state.greetings.map(count => (
+      <HelloWorld key={count} count={count} />
     ));
   }
 
