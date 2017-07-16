@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import './App-header';
+import './App-description';
+import './Box';
+import './Question';
+import './Button';
+
 //import "Question_data_sample.js"
 
 class App extends Component {
@@ -27,12 +33,13 @@ class App extends Component {
           <div className="Question">
             Are you having a good day?
           </div>
+          
           <div className="Button">
             Yes
+          </div>
+          <div className="Button">
             No
           </div>
-
-          
 
         </div>
 
