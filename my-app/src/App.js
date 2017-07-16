@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import './App-header';
-import './App-description';
-import './Box';
-import './Question';
-import './Button';
+import './App-header.css';
+import './App-description.css';
+import './Box.css';
+import './Question.css';
+import './Button.css';
 
 //import "Question_data_sample.js"
 
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>Welcome to Feel Better</h1>
+          <h1>Reflecteve</h1>
         </div>
 
         <div className="App-description">
@@ -32,14 +32,15 @@ class App extends Component {
         <div className="Box">
           <div className="Question">
             Are you having a good day?
-          </div>
-          
+            </div>
           <div className="Button">
             Yes
           </div>
           <div className="Button">
             No
           </div>
+          
+
 
         </div>
 
