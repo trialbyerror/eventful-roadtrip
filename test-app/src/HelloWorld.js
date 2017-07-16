@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import './HelloWorld.css';
+
+import './Box.css';
+import './Question.css';
+import './Button.css';
 
 
 
@@ -7,7 +10,7 @@ class HelloWorld extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { questionstring: 'Are you having a good day?' ,
+    this.state = { questionstring: 'Are you having a bad day?' ,
     q_id: props.count, how_many_yes: 0, extra_string: "" };
     this.click_yes = this.click_yes.bind(this);
     this.click_no = this.click_no.bind(this);
@@ -16,13 +19,17 @@ class HelloWorld extends Component {
   }
 
   render () {
-    return (<div className="HelloWorld">
+    return (<div className="Box">
+    <div className="Question">
     {this.state.questionstring}
+  </div>
     <br/>
-      <button onClick={this.click_yes}>Yes!</button>
-      <button onClick={this.click_no}>No!</button>
+      <button className="Button" onClick={this.click_yes}>Yes!</button>
+      <button className="Button" onClick={this.click_no}>No!</button>
       <br />
+      <div className = "Question">
       {this.state.extra_string}
+    </div>
   </div>);
   }
 
@@ -59,7 +66,7 @@ class HelloWorld extends Component {
         this.setState({questionstring: "Do you have someone you can call?"})
         break;
     case 8:
-        this.setState({questionstring: "Are you thiking of harming yourself in any way?" })
+        this.setState({questionstring: "Are you feeling bad about yourself?" })
         break;
     case 9:
          if (this.state.how_many_yes < 3){
@@ -85,7 +92,7 @@ class HelloWorld extends Component {
     this.setState({q_id: this.state.q_id + 1});
   }
 
-  
+
 
 
 
