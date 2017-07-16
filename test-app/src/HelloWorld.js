@@ -7,28 +7,72 @@ class HelloWorld extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { greeting: 'Hello',
-    number: 5 };
-    this.frenchify = this.frenchify.bind(this);
-    this.increaseNum = this.increaseNum.bind(this);
+    this.state = { questionstring: 'Are you having a good day?' ,
+    count: 0 };
+    this.click_yes = this.click_yes.bind(this);
+    this.click_no = this.click_no.bind(this);
+    this.change_state = this.change_state.bind(this); 
   }
 
   render () {
     return (<div className="HelloWorld">
-    {this.state.greeting} {this.props.name}!, {this.state.number}
+    {this.state.questionstring} 
     <br/>
-      <button onClick={this.frenchify}>Frenchify!</button>
-      <button onClick={this.increaseNum}>Increase!</button>
+      <button onClick={this.click_yes}>Yes!</button>
+      <button onClick={this.click_no}>No!</button>
   </div>);
   }
 
-  frenchify() {
-    this.setState({greeting: 'Bonjour!'});
+
+ 
+  change_state(){
+    switch (this.state.count) {
+    case 0:
+       this.setState({questionstring: "Are you having a good day?" }) 
+       break;
+    case 1:
+       this.setState({questionstring: "Is it better than yesterday?"}) 
+       break;
+    case 2:
+       this.setState({questionstring: "Any progress is improvement! are you having negative thoughts?" })
+       break;
+    case 3:
+        this.setState({questionstring: "Lets take it one day at a time! can you think of a positive memory?"})
+        break; 
+    case 4:
+        this.setState({questionstring: "Are you having trouble breathing?"})
+        break;
+    case 5:
+        this.setState({questionstring: "Are you having negative thoughts?"})
+        break;
+    case 6: 
+        this.setState({questionstring:  "Are you thiking of harming yourself in any way?" })
+        break;
+    case 7: 
+        this.setState({questionstring: "Are you thiking of harming yourself in any way?"})
+        break;
+    case 8:
+        this.setState({questionstring: "Are you thiking of harming yourself in any way?" })
+        break; 
   }
 
-  increaseNum(){
-    this.setState({number: 6})
+}
+
+
+
+  click_yes() {
+    this.setState({count: this.state.count + 1});
+    this.change_state();
   }
+
+  click_no(){
+    this.setState({count: this.state.count + 2 });
+  }
+
+ 
+
+
+
 
 }
 
