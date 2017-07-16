@@ -13,7 +13,6 @@ constructor (props) {
   render() {
     return (
       <div className = "HelloWorldList">
-        <AddGreeter addGreeting = {this.addGreeting}/>
         {this.renderGreetings()}
       </div>
 
