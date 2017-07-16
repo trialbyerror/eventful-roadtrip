@@ -28,7 +28,7 @@ class HelloWorld extends Component {
   change_state(){
     switch (this.state.count) {
     case 0:
-       this.setState({questionstring: "Are you having a good day?" }) 
+       this.setState({questionstring: "Have you gotten any exercise today?" }) 
        break;
     case 1:
        this.setState({questionstring: "Is it better than yesterday?"}) 
@@ -53,7 +53,7 @@ class HelloWorld extends Component {
         break;
     case 8:
         this.setState({questionstring: "Are you thiking of harming yourself in any way?" })
-        break; 
+        break;  
   }
 
 }
@@ -67,6 +67,7 @@ class HelloWorld extends Component {
 
   click_no(){
     this.setState({count: this.state.count + 2 });
+    this.change_state(); 
   }
 
  
