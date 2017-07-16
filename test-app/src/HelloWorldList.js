@@ -21,13 +21,13 @@ constructor (props) {
   }
 
   renderGreetings() {
-    return this.state.greetings.map(name => (
-      <HelloWorld key={name} name={name} />
+    return this.state.greetings.map(questionString => (
+      <HelloWorld key={questionString} questionString={questionString} />
     ));
   }
 
   addGreeting(newName) {
-    this.setState({ greetings: [...this.state.greetings, newName] });
+    this.setState({ greetings: [newName, ...this.state.greetings] });
   }
 }
 

@@ -4,12 +4,12 @@ import './AddGreeter.css';
 class AddGreeter extends Component {
   constructor(props){
     super(props);
-    this.state = { greetingName: ''};
+    this.state = { questionString: ''};
     this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   handleUpdate(event){
-    this.setState({greetingName: event.target.value});
+    this.setState({questionString: event.target.value});
   }
 
   render(){
